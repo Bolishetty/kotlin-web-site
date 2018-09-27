@@ -202,6 +202,9 @@ def community_page():
 def coroutines_alias():
     return render_template('redirect.html', url=url_for('page', page_path='docs/diagnostics/experimental-coroutines'))
 
+@app.route('/docs/reference/coroutines.html')
+def coroutines_redirect():
+    return render_template('redirect.html', url=url_for('page', page_path='docs/reference/coroutines-overview'))
 
 @app.route('/')
 def index_page():
